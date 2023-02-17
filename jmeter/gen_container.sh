@@ -1,5 +1,5 @@
 
-docker run --name="jmeter-v1" --net="host" \
+docker run -e DISPLAY=host.docker.internal:0 --name=jmeter-v1 --net=host \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/input/jmx:/opt/test/input/jmx \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/input/testdata:/opt/test/input/testdata \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/report/html:/opt/test/report/html \
@@ -8,4 +8,3 @@ docker run --name="jmeter-v1" --net="host" \
 -it -d jmeter:v1
 
 #-it -d lukechi1219/jmeter:v1
-
