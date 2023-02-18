@@ -42,5 +42,7 @@ RUN apt-get install -y libxext-dev
 RUN apt-get install -y libxrender-dev
 RUN apt-get install -y libxtst-dev
 
+RUN apt-get install -y vim
+
 # Indicate the default command to run
 CMD jmeter
