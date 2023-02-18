@@ -4,11 +4,8 @@
 # - https://hub.docker.com/_/openjdk/tags?page=1&name=jre-alpine.
 
 # build on the top of Java image
-#FROM openjdk:8
-#FROM openjdk:8-jdk-alpine
-#FROM openjdk:8-jre-alpine
-FROM openjdk:8-jre
-#FROM arm64v8/openjdk:8u342
+#FROM openjdk:8-jre
+FROM arm64v8/openjdk:8-jre
 
 # JMeter Version
 ENV JMETER_VERSION 5.5
