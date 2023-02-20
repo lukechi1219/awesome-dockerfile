@@ -45,4 +45,7 @@ RUN apt-get install -y libxtst-dev
 RUN apt-get install -y vim
 
 # Indicate the default command to run
-CMD jmeter
+#CMD jmeter
+CMD ["/bin/sh"]
+
+# docker build -t jmeter:v1 .
