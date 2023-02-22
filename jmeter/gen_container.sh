@@ -10,7 +10,7 @@ xhost +localhost
 
 xhost
 
-docker run --rm -e DISPLAY=host.docker.internal:0 --name=jmeter-v2 --net=host \
+docker run --rm -e DISPLAY=host.docker.internal:0 --name=jmeter-v2-cmd --net=host \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/input/jmx:/opt/test/input/jmx \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/input/testdata:/opt/test/input/testdata \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/report/html:/opt/test/report/html \
