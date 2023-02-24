@@ -17,7 +17,9 @@ docker run --rm -e DISPLAY=host.docker.internal:0 --name=jmeter-v2-cmd --net=hos
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/report/jtl:/opt/test/report/jtl \
 -v /Users/lukechimbp2023/WorkEnv/jmeter/test/report/outputputdata:/opt/test/report/outputdata \
 -it -d jmeter:v2 \
-jmeter -t /opt/test/input/jmx/BAJI_release_web_homepage.jmx
+jmeter -t /opt/test/input/jmx/Local_Tomcat_Test.jmx
+#jmeter -n -t /opt/test/input/jmx/Local_Tomcat_Test.jmx -l "/opt/test/report/jtl/Local_Tomcat_Test_$timestampStr.jtl" -e -o "/opt/test/report/html/Local_Tomcat_Test_$timestampStr"
 
+#jmeter -t /opt/test/input/jmx/BAJI_release_web_homepage.jmx
 #jmeter -n -t /opt/test/input/jmx/BAJI_release_web_homepage.jmx -l "/opt/test/report/jtl/$timestampStr.jtl" -e -o "/opt/test/report/html/$timestampStr"
 #ls -alh
