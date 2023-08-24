@@ -1,0 +1,20 @@
+FROM ubuntu:20.04
+
+# Install Python, SSH and Ansible
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    ssh \
+    ansible
+
+# Cleanup
+RUN apt-get clean
+
+# Ensure Python and Pip are set to the right version
+RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN ln -s /usr/bin/pip3 /usr/bin/pip
+
+# Set up SSHD
+RUN mkdir /var/run/sshd
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
