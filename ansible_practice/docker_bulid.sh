@@ -1,6 +1,4 @@
 
-
-
 # build docker image from Dockerfile_rockylinux
 docker build -t ansible_practice_rockylinux -f Dockerfile_rockylinux .
 

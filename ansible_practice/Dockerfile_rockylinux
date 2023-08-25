@@ -1,5 +1,5 @@
 # Start with the Rocky Linux 8 base image
-FROM rockylinux/rockylinux:8.8
+FROM --platform=linux/amd64 rockylinux/rockylinux:8.8
 
 # Install Python, OpenSSH, and other utilities
 RUN dnf -y install python3 python3-pip openssh-server openssh-clients && \
