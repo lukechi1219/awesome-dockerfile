@@ -16,5 +16,8 @@ RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 # Set up SSHD
 RUN mkdir /var/run/sshd
+
 EXPOSE 22
+EXPOSE 8080
+
 CMD ["/usr/sbin/sshd", "-D"]
