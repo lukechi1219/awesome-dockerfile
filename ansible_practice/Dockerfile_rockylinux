@@ -17,7 +17,7 @@ RUN alternatives --set python /usr/bin/python3
 
 # Expose the SSH port
 EXPOSE 22
-EXPOSE 8080
+EXPOSE 80
 
 # Start SSHD in the foreground
 CMD ["/usr/sbin/sshd", "-D"]
