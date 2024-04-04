@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+    volumes:
+      - type: bind
+        source: ./7projects-blog
+        target: /srv/jekyll
+        bind:
+          propagation: "rprivate"
+    ports:
+      - "4000:4000"
+    command: jekyll serve --trace
+    environment:
+      JEKYLL_ENV: development
